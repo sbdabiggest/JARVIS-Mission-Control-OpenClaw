@@ -8,6 +8,7 @@ Format: [version] — date | what changed | PR
 ## [Unreleased] — JARVIS Voice & Cinematic HUD
 
 ### Added
+- 🧽 **Stephen — SB Detailing CEO Telegram bot** — `server/stephen-bot.js` (zero-dependency long polling, `npm run stephen` / pm2). Answers as the CEO of SB Detailing, files `/task` and group-@mention instructions as schema-valid Mission Control tasks assigned to `agent-stephen` (self-registered on first run), reports board state via `/status` `/tasks`, and holds real conversations when `ANTHROPIC_API_KEY` is set (canned persona replies otherwise). Health verifier: `scripts/check-stephen.sh` (token → getMe → webhook conflict → process → registration → optional live send). Setup + troubleshooting: `docs/STEPHEN-BOT.md`. Live token/state files are gitignored like the rest of `.mission-control/config/`.
 - 🎙️ **Two-way voice (JARVIS Voice)** — `dashboard/js/jarvis-voice.js`. Speaks via the Web Speech API (auto-selects a British English voice to match the films) and listens for spoken commands via `SpeechRecognition`. Degrades gracefully: speech output works everywhere; voice commands light up in Chrome/Edge and stay silent elsewhere.
   - Commands: status report, open chat/reports/schedules/events/GitHub, "create task …", switch theme (jarvis/matrix), mute/unmute, greeting.
   - Event announcements wired to the live WebSocket bus: new task, task DONE/BLOCKED, review submitted/approved, quota exceeded, uplink lost/restored.

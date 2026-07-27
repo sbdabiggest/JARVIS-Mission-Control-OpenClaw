@@ -57,6 +57,9 @@ coverage/
 .mission-control/archived-tasks/
 # Live Telegram bot mapping — deployment-specific (template lives in examples/config/agents.json)
 .mission-control/config/agents.json
+# Stephen bot live config (token) + poll-offset state — deployment-specific (see docs/STEPHEN-BOT.md)
+.mission-control/config/stephen.json
+.mission-control/config/stephen-state.json
 .mission-control/logs/activity.log
 .mission-control/logs/*.log
 .mission-control/tasks/*.json

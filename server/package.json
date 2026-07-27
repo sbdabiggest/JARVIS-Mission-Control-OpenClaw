@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "bridge": "node agent-bridge.js",
+    "stephen": "node stephen-bot.js",
     "all": "node start-all.js",
     "dev": "node index.js --watch"
   },
